@@ -1,0 +1,13 @@
+.postStyle {
+  border: 1px solid grey;
+  border-radius:10px;
+  background-color: lightcyan;
+  margin: 20px;
+  padding: 50px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+
+  
+}
