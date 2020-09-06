@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 const Post = (props) => {
   const classes = useStyles();
 
-  const {id} = props.post;
+  const { id, title } = props.post;
   const history = useHistory();
   const handleClick = (postId) => {
     const url = `/posts/${postId}`;
@@ -41,15 +41,16 @@ const Post = (props) => {
     <div className="postStyle">
 
       <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-       <h2> <strong> Id of post: {id} </strong> </h2> 
-        </Typography>
-      </CardContent>
-      
-      <CardActions>
-      <Button variant="contained" color="secondary" onClick={() => handleClick(id)}> See Post </Button>
-      </CardActions>
+        <CardContent>
+          <Typography className={classes.title} color="textSecondary" gutterBottom>
+            <h2> <strong> Id of post: {id} </strong> </h2>
+            <h3> Title: {title} </h3>
+          </Typography>
+        </CardContent>
+
+        <CardActions>
+          <Button variant="contained" color="secondary" onClick={() => handleClick(id)}> See Post </Button>
+        </CardActions>
       </Card>
 
     </div>

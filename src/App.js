@@ -13,20 +13,20 @@ import PostDetails from './Components/PostDetails/PostDetails';
 function App() {
   return (
     <Router>
-     <Switch>
-       <Route path="/home">
-        <Home></Home>
-       </Route>
-       <Route path="/posts/:postId">
-        <PostDetails></PostDetails>
-       </Route>
-       <Route exact path="/">
-        <Home />
-       </Route>
-       <Route path="*">
-         <Nomatch />
-       </Route>
-     </Switch>
+      <Switch>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/posts/:postId">
+          <PostDetails></PostDetails>
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="*">
+          <Nomatch />
+        </Route>
+      </Switch>
     </Router>
   );
 }
